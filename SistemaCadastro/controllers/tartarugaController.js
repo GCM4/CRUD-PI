@@ -60,3 +60,43 @@ const TartarugaController = {
 }
 
 export default TartarugaController
+
+const TartarugaController = {
+
+  async listar(req, res) {
+
+  },
+
+  cadastro(req, res) {
+
+  },
+
+  async salvar(req, res) {
+
+  },
+
+  async excluir(req, res) {
+
+  },
+
+  async editarPage(req, res) {
+
+    const { id } = req.params
+
+    const tartaruga = await Tartaruga.findByPk(id)
+
+    res.render('editar', { tartaruga })
+  },
+
+  async atualizar(req, res) {
+
+    const { id } = req.params
+
+    await Tartaruga.update(req.body, {
+      where: { id }
+    })
+
+    res.redirect('/')
+  }
+
+}

@@ -85,7 +85,6 @@ input[type="file"] {
   padding: 12px;
   border-radius: 10px;
   cursor: pointer;
-<<<<<<< HEAD
 }
 .login-container {
   max-width: 400px;
@@ -125,7 +124,16 @@ input[type="file"] {
 
 .btn-cadastro-user {
   background: #19c7b5;
-=======
+}
+.btn-editar {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  background: #0095c8;
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  text-decoration: none;
   font-weight: bold;
->>>>>>> 1dedab2e9ecc0bb85c4ab4f0187522d891256733
 }

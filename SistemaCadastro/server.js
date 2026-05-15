@@ -62,3 +62,11 @@ sequelize.sync()
   resave: false,
   saveUninitialized: false
 }))
+
+app.get('/login', authController.loginPage)
+
+app.post('/login', authController.login)
+
+app.get('/editar/:id', TartarugaController.editarPage)
+
+app.post('/atualizar/:id', TartarugaController.atualizar)
