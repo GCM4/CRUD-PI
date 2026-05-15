@@ -55,30 +55,7 @@ const TartarugaController = {
     })
 
     res.redirect('/')
-  }
-
-}
-
-export default TartarugaController
-
-const TartarugaController = {
-
-  async listar(req, res) {
-
   },
-
-  cadastro(req, res) {
-
-  },
-
-  async salvar(req, res) {
-
-  },
-
-  async excluir(req, res) {
-
-  },
-
   async editarPage(req, res) {
 
     const { id } = req.params
@@ -100,3 +77,5 @@ const TartarugaController = {
   }
 
 }
+
+export default TartarugaController

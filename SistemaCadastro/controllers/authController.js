@@ -31,7 +31,24 @@ const authController = {
     req.session.usuario = usuario.id
 
     res.redirect('/')
-  }
+  },
+
+  cadastroPage(req, res) {
+  res.render('cadastro-usuario')
+},
+  async cadastrar(req, res) {
+
+    const { email, senha } = req.body
+
+    const senhaHash = await bcrypt.hash(senha, 10)
+
+    await Usuario.create({
+      email,
+      senha: senhaHash
+    })
+
+  res.redirect('/login')
+}
 
 }
 

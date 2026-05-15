@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url'
 
 import sequelize from './models/database.js'
 import TartarugaController from './controllers/tartarugaController.js'
+import authController from './controllers/authController.js'
 import session from 'express-session'
 
 const app = express()
@@ -62,7 +63,7 @@ sequelize.sync()
   resave: false,
   saveUninitialized: false
 }))
-
+// 
 app.get('/login', authController.loginPage)
 
 app.post('/login', authController.login)
@@ -70,3 +71,13 @@ app.post('/login', authController.login)
 app.get('/editar/:id', TartarugaController.editarPage)
 
 app.post('/atualizar/:id', TartarugaController.atualizar)
+// 
+app.get(
+  '/cadastro-usuario',
+  authController.cadastroPage
+)
+
+app.post(
+  '/cadastro-usuario',
+  authController.cadastrar
+)
