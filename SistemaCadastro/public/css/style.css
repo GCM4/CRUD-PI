@@ -59,3 +59,42 @@
   border-radius: 8px;
   cursor: pointer;
 }
+.login-container {
+  max-width: 400px;
+  margin: 120px auto;
+  padding: 25px;
+}
+
+.logo {
+  text-align: center;
+  font-size: 55px;
+  font-weight: bold;
+  color: #0fa8b7;
+  margin-bottom: 60px;
+}
+
+.login-botoes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.btn-login,
+.btn-cadastro-user {
+  width: 45%;
+  text-align: center;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.btn-login {
+  background: #83c7de;
+}
+
+.btn-cadastro-user {
+  background: #19c7b5;
+}

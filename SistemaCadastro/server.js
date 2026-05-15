@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url'
 
 import sequelize from './models/database.js'
 import TartarugaController from './controllers/tartarugaController.js'
+import session from 'express-session'
 
 const app = express()
 
@@ -55,3 +56,9 @@ sequelize.sync()
   .catch(err => {
     console.log(err)
   })
+
+  app.use(session({
+  secret: 'tartarugas',
+  resave: false,
+  saveUninitialized: false
+}))
