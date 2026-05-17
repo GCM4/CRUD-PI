@@ -1,3 +1,4 @@
+import mysql from 'mysql2/promise'
 import express from 'express'
 import path from 'path'
 import multer from 'multer'
@@ -45,6 +46,23 @@ app.post(
 )
 
 app.post('/excluir/:id', TartarugaController.excluir)
+
+async function criarBanco() {
+
+  const connection = await mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: ''
+  })
+
+  await connection.query(`
+    CREATE DATABASE IF NOT EXISTS SistemaCadastroTartaruga
+  `)
+
+  console.log('Banco criado ou já existente')
+}
+
+await criarBanco()
 
 sequelize.sync()
   .then(() => {
