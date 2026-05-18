@@ -1,8 +1,47 @@
+@font-face {
+    font-family: 'Potta One';
+    src: url('../fonts/PottaOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* --- REGULAR (Peso 400) --- */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* --- MEDIUM (Peso 500) --- */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* --- SEMI BOLD (Peso 600) --- */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* --- BOLD (Peso 700) --- */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -40,9 +79,13 @@ body {
   text-align: center;
   font-size: 48px;
   font-weight: bold;
-  color: #0fa8b7;
   margin-top: 120px;
   margin-bottom: 70px;
+  font-family: 'Potta One', sans-serif;
+  background: linear-gradient(90deg, #15BFAE 0%, #0381AF 100%, #0CA1AE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 form {
@@ -89,6 +132,7 @@ textarea {
 .btn-salvar,
 .btn-login,
 .btn-cadastro-completo {
+  width: 100%;
   background: #19c7b5;
   color: white;
   border: none;
@@ -96,6 +140,7 @@ textarea {
   border-radius: 12px;
   font-size: 16px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .login-botoes {
@@ -107,7 +152,7 @@ textarea {
 
 .btn-login,
 .btn-cadastro-user {
-  width: 100%;
+  flex: 1;
   text-align: center;
   text-decoration: none;
   padding: 14px;
@@ -118,6 +163,9 @@ textarea {
 
 .btn-login {
   background: #83c7de;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
 }
 
 .btn-cadastro-user {
